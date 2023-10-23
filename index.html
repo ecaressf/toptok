@@ -1,17 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>TopTok</title>
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TikTok Clone</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   </head>
   <body>
-    <main>
-        <h1>Welcome to TopTok</h1>  
-      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@emrata/video/7278156317263433002" data-video-id="7278156317263433002" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@emrata" href="https://www.tiktok.com/@emrata?refer=embed">@emrata</a> <a title="vmas" target="_blank" href="https://www.tiktok.com/tag/vmas?refer=embed">#vmas</a> <a target="_blank" title="♬ Paint The Town Red - Doja Cat" href="https://www.tiktok.com/music/Paint-The-Town-Red-7263241548443568130?refer=embed">♬ Paint The Town Red - Doja Cat</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
-    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@emrata/video/7183100190818241838" data-video-id="7183100190818241838" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@emrata" href="https://www.tiktok.com/@emrata?refer=embed">@emrata</a> <p></p> <a target="_blank" title="♬ Coi Leray Players DJ Saige Mashup - Saige💿" href="https://www.tiktok.com/music/Coi-Leray-Players-DJ-Saige-Mashup-7174260137358641966?refer=embed">♬ Coi Leray Players DJ Saige Mashup - Saige💿</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
-    </main>
+    <div class="app__videos">
+      <!-- video starts -->
+      <div class="video">
+        <video class="video__player" src="video1.mp4"></video>
+
+        <!-- sidebar -->
+        <div class="videoSidebar">
+          <div class="videoSidebar__button">
+            <span class="material-icons"> favorite_border </span>
+            <p>12</p>
+          </div>
+
+          <div class="videoSidebar__button">
+            <span class="material-icons"> message </span>
+            <p>23</p>
+          </div>
+
+          <div class="videoSidebar__button">
+            <span class="material-icons"> share </span>
+            <p>75</p>
+          </div>
+        </div>
+
+        <!-- footer -->
+        <div class="videoFooter">
+          <div class="videoFooter__text">
+            <h3>Somanath Goudar</h3>
+            <p class="videoFooter__description">Best Video Ever</p>
+
+            <div class="videoFooter__ticker">
+              <span class="material-icons videoFooter__icon"> music_note </span>
+              <marquee>Song name</marquee>
+            </div>
+          </div>
+          <img
+            src="https://static.thenounproject.com/png/934821-200.png"
+            alt=""
+            class="videoFooter__record"
+          />
+        </div>
+      </div>
+      <!-- video ends -->
+
+      <!-- video starts -->
+      <div class="video">
+        <video class="video__player" src="video2.mp4"></video>
+
+        <!-- sidebar -->
+        <div class="videoSidebar">
+          <div class="videoSidebar__button">
+            <span class="material-icons"> favorite_border </span>
+            <p>12</p>
+          </div>
+
+          <div class="videoSidebar__button">
+            <span class="material-icons"> message </span>
+            <p>23</p>
+          </div>
+
+          <div class="videoSidebar__button">
+            <span class="material-icons"> share </span>
+            <p>75</p>
+          </div>
+        </div>
+
+        <!-- footer -->
+        <div class="videoFooter">
+          <div class="videoFooter__text">
+            <h3>Somanath Goudar</h3>
+            <p class="videoFooter__description">Best Video Ever</p>
+
+            <div class="videoFooter__ticker">
+              <span class="material-icons videoFooter__icon"> music_note </span>
+              <marquee>Song name</marquee>
+            </div>
+          </div>
+          <img
+            src="https://static.thenounproject.com/png/934821-200.png"
+            alt=""
+            class="videoFooter__record"
+          />
+        </div>
+      </div>
+      <!-- video ends -->
+    </div>
+
+    <script>
+      const videos = document.querySelectorAll('video');
+
+      for (const video of videos) {
+        video.addEventListener('click', function () {
+          console.log('clicked');
+          if (video.paused) {
+            video.play();
+          } else {
+            video.pause();
+          }
+        });
+      }
+    </script>
   </body>
 </html>
